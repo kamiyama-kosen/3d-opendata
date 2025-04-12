@@ -1,0 +1,58 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width"><link rel="icon" href="data:">
+<title>神山まるごと高専オフィス 360度写真 2025.04.10</title>
+<script src="https://code4fukui.github.io/aframe/dist/aframe-master.min.js"></script>
+<!--
+<script src="https://rawgit.com/fernandojsg/aframe-teleport-controls/master/dist/aframe-teleport-controls.min.js"></script>
+<script type="module" src="./drone-controls-mode2.js"></script>
+-->
+<script type="module" src="https://code4fukui.github.io/glb-viewer/mc-controls.js"></script>
+
+<style>
+#help {
+  position: absolute;
+  background-color: white;
+  border: 2px solid black;
+  padding: .3em;
+  color: black;
+  z-index: 30;
+  margin: .5em;
+}
+#usdz {
+  position: absolute;
+  bottom: 1em;
+  background-color: white;
+  border: 2px solid black;
+  padding: .3em;
+  color: black;
+  z-index: 30;
+  margin: .5em;
+}
+a {
+  color: black !important;
+}
+</style>
+</head>
+<body>
+
+<div id="help">操作方法: カーソルで移動、マウスで視点変更、スペースキーで上昇、シフトキーで下降</div>
+<div id="usdz"><a href=./kamiyama-kosen-office-20250410.usdz>USDZファイル for iPhone/iPad/Mac</a></div>
+
+<a-scene id="scene" background="color: #4080e0" renderer="colorManagement: true">
+  <a-sky id="sky" material="repeat: -1 1" geometry="" scale="" rotation="0 40 0" src="./kamiyama-kosen-360-20250410.jpg"></a-sky>
+
+  <a-entity light="type: ambient; color: #FFF"></a-entity>
+    <!-- <a-sphere id="sphere" color="#f22"></a-sphere> -->
+  <a-entity id="cameraRig" position="0 0 0" rotation="0 0 0">
+    <a-entity id="head" camera position="20 20 60" rotation="0 0 0" mc-controls look-controls x-drone-controls-mode2></a-entity>
+    <a-entity oculus-touch-controls="hand:left" teleport-controls="button:trigger; collisionEntities:.collidable; cameraRig:#cameraRig; teleportOrigin:#head;"></a-entity>
+    <a-entity oculus-touch-controls="hand:right" teleport-controls="button:trigger; collisionEntities:.collidable; cameraRig:#cameraRig; teleportOrigin:#head;"></a-entity>
+    <!--
+    <a-entity id="leftHand" hand-tracking-controls="hand: left;"></a-entity>
+    <a-entity id="rightHand" hand-tracking-controls="hand: right;"></a-entity>
+    -->
+    </a-entity>
+</a-scene>
+
+  
+</body>
+</html>
