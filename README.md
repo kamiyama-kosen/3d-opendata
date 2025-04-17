@@ -2,6 +2,10 @@
 
 - [神山まるごと高専3Dオープンデータ](https://kamiyama-kosen.github.io/3d-opendata/)
 
+## アプリ
+
+- [神山コースター](https://code4fukui.github.io/vr-tojinbo/kamiyamacoaster.html)
+
 ## ライセンス
 
 - <a href=https://creativecommons.org/licenses/by/4.0/deed.ja>CC BY</a> <a href=https://kamiyama-marugoto.com/>神山まるごと高専</a>
